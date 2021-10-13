@@ -22,17 +22,17 @@ export default function AboutMe() {
 
   return (
     <div
-      className={`fade-wrapper ${fadeState} max-w-4xl mt-32 text-left`}
+      className={`fade-wrapper ${fadeState} max-w-4xl my-32 text-left`}
       style={{ transitionDuration: `${1000}ms` }}
     >
       <h2 className="w-full text-left border-b-2">All About Me:</h2>
 
-      <div className="float-right px-4 pt-8">
+      <div className="md:float-right px-4 pt-8">
         <img
           src="/assets/img/thumbsup.PNG"
-          className="w-38 h-48 rounded-2xl shadow-xl float-left mr-8"
+          className="w-38 h-48 rounded-2xl shadow-xl m-auto mb-8 md:mb-0 md:float-left md:mr-8"
         />
-        <div className="ml-8">
+        <div className="m-auto md:ml-8">
           <p>
             I am a 19 year old second year student studying Computer Science at
             Queen Mary University of London. I have been interested in
