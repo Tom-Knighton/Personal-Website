@@ -27,7 +27,7 @@ export default function AboutMe() {
     >
       <h2 className="w-full text-left border-b-2">All About Me:</h2>
 
-      <div className="md:float-right px-4 pt-8">
+      <div className="px-4 pt-8">
         <img
           src="/assets/img/thumbsup.PNG"
           className="w-38 h-48 rounded-2xl shadow-xl m-auto mb-8 md:mb-0 md:float-left md:mr-8"
