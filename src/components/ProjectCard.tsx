@@ -16,7 +16,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       {project.projectImageNames && (
         <div className="m-3">
           <img
-            src={`/assets/img/${project.projectImageNames[0]}`}
+            src={require(`../assets/img/${project.projectImageNames[0]}`).default}
             className="rounded-md shadow-xl md:h-80 m-auto"
           />
         </div>
