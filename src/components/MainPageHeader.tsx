@@ -21,7 +21,7 @@ function MainPageHeader() {
     }, []);
 
   return (
-    <div className={`fade-wrapper ${fadeState} max-w-4xl m-auto px-12`} style={{ transitionDuration: `${1000}ms` }}>
+    <div className={`fade-wrapper ${fadeState} max-w-4xl m-auto`} style={{ transitionDuration: `${1000}ms` }}>
       <h1>Hi, I'm Tom 👋</h1>
       <span>I am currently a second year student of Computer Science at Queen Mary University of London. I work mainly with Swift for iOS development and C#, but have experience with other OOP languages.
           I have published an iOS and an Android app to their respective app stores, and have completed freelance projects for individuals.
