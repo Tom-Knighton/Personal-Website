@@ -47,7 +47,22 @@ export default function AboutMe() {
             projects with ASP.NET core in C#, as well as modifications for
             gaming communities.
           </p>
-          <button className="gitbutton mt-12">GitHub</button>
+          <div className="my-12 ">
+            <a
+              href="https://github.com/Tom-Knighton"
+              target="_blank"
+              className="gitbutton mt-12"
+            >
+              My GitHub
+            </a>
+            <a
+              href="mailto:tomknighton@icloud.com"
+              target="_blank"
+              className="appStoreButton mt-12 ml-8"
+            >
+              Email Me
+            </a>
+          </div>
         </div>
       </div>
     </div>
