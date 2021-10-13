@@ -13,8 +13,7 @@ html, body {
     "Noto Sans", "Liberation Sans",
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-    @apply dark:bg-darkgray;
-    @apply dark:text-white;
+    @apply bg-darkgray text-white;
 }
 
 
