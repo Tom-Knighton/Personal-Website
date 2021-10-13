@@ -105,7 +105,7 @@ export default function Projects() {
       className={`fade-wrapper ${fadeState} max-w-4xl mt-20 text-left`}
       style={{ transitionDuration: `${1000}ms` }}
     >
-      <h2 className="w-full text-left border-b-2">My Projects:</h2>
+      <h2 className="w-full text-left border-b-2">Some of My Projects:</h2>
 
       {projects.map((project) => (
         <ProjectCard project={project} />

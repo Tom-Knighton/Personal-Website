@@ -41,7 +41,6 @@ export default function FunStuff() {
         <svg className="w-full md:w-1/2 m-auto">
           <image
             href="https://spotify-readme-tom-knighton.vercel.app/api?theme=dark"
-            className="m-auto"
           />
         </svg>
       </div>
