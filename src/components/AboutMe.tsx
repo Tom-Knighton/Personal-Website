@@ -22,7 +22,7 @@ export default function AboutMe() {
 
   return (
     <div
-      className={`fade-wrapper ${fadeState} max-w-4xl my-32 text-left`}
+      className={`fade-wrapper ${fadeState} max-w-4xl mt-32 text-left`}
       style={{ transitionDuration: `${1000}ms` }}
     >
       <h2 className="w-full text-left border-b-2">All About Me:</h2>
