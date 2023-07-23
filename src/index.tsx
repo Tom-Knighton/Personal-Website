@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, BrowserRouter, Route, Routes } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 import GaryDitPage from "./pages/GaryDit";
@@ -9,17 +9,22 @@ import GaryDitPage from "./pages/GaryDit";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
   },
   {
     path: "/garydit",
-    element: <GaryDitPage/>
-  }
+    element: <GaryDitPage />,
+  },
 ]);
 
 ReactDOM.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/garydit" element={<GaryDitPage />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
