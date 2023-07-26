@@ -19,4 +19,4 @@ COPY . .
 RUN NODE_OPTIONS=--openssl-legacy-provider npm run build
 
 EXPOSE 8080
-CMD [ "http-server", "build" ]
+CMD [ "http-server", "--proxy", "http://localhost:8080?", "build" ]
