@@ -33,7 +33,7 @@ export default function Projects() {
         "GaryDit is a personally developed iOS application developed after Reddit shut down free public API access for popular applications. GaryDit is built natively for iOS, taking cues from the popular app" +
         " Apollo for Reddit, which is no longer available. GaryDit utilises a custom .NET core backend, reducing complex work on the client and unneccesary API calls to Reddit. GaryDit features several other" +
         " features not available on the native Reddit Client, like random subreddits, AI integrations and OCR. In addition, I developed my own markdown parser/viewer, custom for Reddit's own Snudown implementation.",
-      projectImageNames: ["garygopromo.png"],
+      projectImageNames: ["gdit_3.PNG", "gdit_1.PNG"],
       projectTags: [
         "Swift",
         "SwiftUI 5.0",
