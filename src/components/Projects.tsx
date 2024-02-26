@@ -28,6 +28,22 @@ export default function Projects() {
       isPrivate: true
     },
     {
+      projectName: "GaryDit - iOS + MarkDownView",
+      projectDesc:
+        "GaryDit is a personally developed iOS application developed after Reddit shut down free public API access for popular applications. GaryDit is built natively for iOS, taking cues from the popular app" +
+        " Apollo for Reddit, which is no longer available. GaryDit utilises a custom .NET core backend, reducing complex work on the client and unneccesary API calls to Reddit. GaryDit features several other" +
+        " features not available on the native Reddit Client, like random subreddits, AI integrations and OCR. In addition, I developed my own markdown parser/viewer, custom for Reddit's own Snudown implementation.",
+      projectImageNames: ["garygopromo.png"],
+      projectTags: [
+        "Swift",
+        "SwiftUI 5.0",
+        "AVFoundation",
+        "URLSession",
+        ".NET Core 8",
+      ],
+      githubLink: "https://github.com/Tom-Knighton/GaryDit"
+    },
+    {
       projectName: "Gary Portal - iOS",
       projectDesc:
         "Gary Portal is a social media iOS application, written entirely in SwiftUI and some UIKit modules. Gary Portal allows you to post updates on your life" +
@@ -38,7 +54,7 @@ export default function Projects() {
       projectTags: [
         "Swift",
         "SwiftUI",
-        "UIKit",
+        ".NET Core",
         "AVFoundation",
         "Codable",
         "URLSession",
