@@ -7,6 +7,7 @@ export interface Project {
   projectTags?: string[] | null;
   githubLink?: string;
   appStoreLink?: string;
+  isPrivate?: boolean;
 }
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -41,6 +42,14 @@ export default function ProjectCard({ project }: { project: Project }) {
             target="_blank"
           >
             GitHub
+          </a>
+        )}
+        {project.isPrivate && (
+          <a
+            className="gitbutton"
+            target="_blank"
+          >
+            Code not public while under development for Final Year Project.
           </a>
         )}
         {project.appStoreLink && (

@@ -9,6 +9,25 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
+      projectName: "Go Travel - iOS",
+      projectDesc:
+        "Go Travel is an iOS application I am currently developing in SwiftUI, and a full backend in .NET Core. Go Travel is part of my final year project at university," +
+        " and aims to encourage usage of public transport across the UK. The application has several unique features across the full stack, and leverages some of the newest technologies both on iOS and" +
+        " on the backend, such as Macros in Swift, new MapKit features, keyed services in dotnet and much more. The application also has a social element, where users can compete to travel the most, and make" +
+        " update posts to their followers.",
+      projectImageNames: ["garygopromo.png"],
+      projectTags: [
+        "Swift",
+        "SwiftUI 5.0",
+        "MapKit",
+        "Codable",
+        "URLSession",
+        ".NET Core 8",
+        "Auth 0",
+      ],
+      isPrivate: true
+    },
+    {
       projectName: "Gary Portal - iOS",
       projectDesc:
         "Gary Portal is a social media iOS application, written entirely in SwiftUI and some UIKit modules. Gary Portal allows you to post updates on your life" +
@@ -28,26 +47,6 @@ export default function Projects() {
       ],
       githubLink: "https://github.com/Tom-Knighton/Gary-Portal-iOS",
       appStoreLink: "https://apps.apple.com/kw/app/gary-portal/id1346147876",
-    },
-    {
-      projectName: "Go London - iOS (Name TBD)",
-      projectDesc:
-        "Go London is an iOS application I am currently developing in SwiftUI, born from my dislike of the official TfL Go app and my discovery that TfL has a public" +
-        " API. The app shows users the status of current train lines, any information about disruptions, and users can/will be able to search for stops and get directions." +
-        "\n\nUsers will also be able to view train and bus timetables for any stop, and view information such as accesibility information for any stop. (All of this together is " +
-        "more information than the TfL Go app!\n\nIn addition, the app presents the information in a fun way, and I have managed to leverage some iOS frameworks such as MapKit.",
-      projectImageNames: ["garygopromo.png"],
-      projectTags: [
-        "Swift",
-        "SwiftUI 3.0",
-        "UIKit",
-        "MapKit",
-        "Codable",
-        "URLSession",
-        "Public API",
-        "Lottie",
-      ],
-      githubLink: "https://github.com/Tom-Knighton/Gary-Go",
     },
     {
       projectName: "Gary Portal API - .NET Core (C#)",
