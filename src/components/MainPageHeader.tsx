@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import StatusCard from './StatusCard';
+// import StatusCard from './StatusCard';
 
 function MainPageHeader() {
 

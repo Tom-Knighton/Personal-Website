@@ -1,12 +1,27 @@
 import { useEffect, useState } from "react";
 
+const getAge = (): number => {
+  const birthday = new Date("2002-01-27T00:00:00");
+  var today = new Date();
+  var thisYear = 0;
+  if (today.getMonth() < birthday.getMonth()) {
+      thisYear = 1;
+  } else if ((today.getMonth() == birthday.getMonth()) && today.getDate() < birthday.getDate()) {
+      thisYear = 1;
+  }
+  var age = today.getFullYear() - birthday.getFullYear() - thisYear;
+  return age;
+}
+
 export default function AboutMe() {
   const [fadeTransition, setFadeTransition] = useState<NodeJS.Timeout | null>(
     null
   );
   const [fadeState, setFadeState] = useState<String>("fade-out");
+  const [age, setAge] = useState<number>(22);
 
   useEffect(() => {
+    setAge(getAge());
     const timeout = setTimeout(() => {
       setFadeTransition(null);
       setFadeState("fade-in");
@@ -34,18 +49,17 @@ export default function AboutMe() {
         />
         <div className="m-auto md:ml-8">
           <p>
-            I am a 19 year old second year student studying Computer Science at
+            I am a {age} year old final year student studying Computer Science at
             Queen Mary University of London. I have been interested in
             programming since getting my first laptop at age 14, and started
             programming for iOS at 16/17.
           </p>
           <p className="pt-2">
-            For the past few years I have focused on iOS development with Swift,
-            creating complete mobile apps. I have also worked with Java and C#,
-            I made and published an Android application written in Java to the
-            Google Play Store in 2017, and have developed several APIs for my
-            projects with ASP.NET core in C#, as well as modifications for
-            gaming communities.
+            For the past few years I have been a fullstack (React + .NET Core) developer at Mountain Warehouse,
+            though I have been focused on iOS development in Swift and SwiftUI for personal projects.
+            In the past, I have made and published Android applications written in Java to the Google Play Store,
+            and have developed several APIs and projects in C#/.Net Core, as well as been involved in several
+            modding communities for games.
           </p>
           <div className="my-12 ">
             <a
@@ -56,7 +70,7 @@ export default function AboutMe() {
               My GitHub
             </a>
             <a
-              href="mailto:tomknighton@icloud.com"
+              href="mailto:tomk@tomk.online"
               target="_blank"
               className="appStoreButton mt-12 ml-8"
             >
