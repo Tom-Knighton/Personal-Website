@@ -1,0 +1,68 @@
+$background-color: #0a0f1c;
+$text-color: #ffffff;
+$input-background: rgba(229, 231, 235, 0.1);
+$accent-color: #4a90e2;
+$transition-duration: 0.3s;
+
+.contact {
+  form {
+    width: 100%;
+
+    .formGroup {
+      margin-bottom: 1.5rem;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 1rem;
+        background: $input-background;
+        border: none;
+        border-radius: 8px;
+        color: $text-color;
+        font-size: 1rem;
+        transition: background-color 0.3s ease-in-out;
+
+        &:focus {
+          outline: none;
+          background: lighten($input-background, 5%);
+        }
+
+        &::placeholder {
+          color: rgba($text-color, 0.6);
+        }
+      }
+
+      textarea {
+        min-height: 200px;
+        resize: vertical;
+      }
+    }
+
+    .submitButton {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: $accent-color;
+      color: $text-color;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background-color $transition-duration;
+
+      &:hover {
+        background-color: lighten($accent-color, 10%);
+      }
+
+      svg {
+        transition: transform $transition-duration;
+      }
+
+      &:hover svg {
+        transform: translateX(4px);
+      }
+    }
+  }
+}

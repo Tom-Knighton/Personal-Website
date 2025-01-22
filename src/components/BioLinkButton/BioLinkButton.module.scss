@@ -1,0 +1,25 @@
+.button {
+    padding: 0.7rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+
+    transition: 0.3s ease-in-out;
+
+    .name {
+        font-weight: bolder;
+    }
+
+    img {
+        width: 2rem;
+        height: auto;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

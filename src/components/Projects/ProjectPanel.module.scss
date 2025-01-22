@@ -1,0 +1,56 @@
+.container {
+  margin: 2rem 0rem;
+  width: 100%;
+  background-color: #2a303d;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 2rem;
+  justify-content: space-between;
+
+  .details {
+    padding-right: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .pills {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0rem 0.5rem;
+    }
+
+    button {
+      border: 1px solid white;
+      border-radius: 1rem;
+      padding: 0.5rem;
+
+      &:hover {
+        background-color: #3a404d;
+      }
+    }
+  }
+
+  .image {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img {
+      object-fit: contain;
+      object-position: center;
+      border-radius: 0.6rem;
+      max-height: 30rem;
+      width: fit-content;
+    }
+  }
+
+  :global(h3) {
+    font-weight: bold;
+    font-size: larger;
+  }
+}
