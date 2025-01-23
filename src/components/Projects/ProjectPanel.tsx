@@ -24,7 +24,11 @@ const ProjectPanel = ({ project }: IProjectPanelProps) => {
             </div>
           ))}
         </div>
-        {project.gitHubLink && <button>GitHub</button>}
+        {project.gitHubLink && (
+          <a href={project.gitHubLink}>
+            <button>GitHub</button>
+          </a>
+        )}
       </div>
       <div className={styles.image}>
         <Image
