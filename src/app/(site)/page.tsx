@@ -13,6 +13,9 @@ import ExperienceTimeline from "@/components/Experience/ExperienceTimeline";
 import EducationTimeline from "@/components/Education/EducationTimeline";
 import ContactMe from "@/components/Contact/ContactMe";
 import { ToastContainer } from "react-toastify";
+
+export const dynamic = 'force-static'
+
 const payload = await getPayload({ config });
 
 export default async function Home() {
