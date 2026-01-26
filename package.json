@@ -23,7 +23,8 @@
     "react-dom": "^19.0.0",
     "react-toastify": "^11.0.3",
     "resend": "^4.1.1",
-    "sass": "^1.83.4"
+    "sass": "^1.83.4",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -39,5 +40,5 @@
   "browser": {
     "child_process": false
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  "packageManager": "pnpm@10.28.1"
 }
