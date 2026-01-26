@@ -32,5 +32,9 @@ export const Project: CollectionConfig = {
       name: "gitHubLink",
       type: "text",
     },
+    {
+      name: "sortOrder",
+      type: "number",
+    }
   ],
 };

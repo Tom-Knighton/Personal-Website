@@ -27,7 +27,7 @@ export default async function Home() {
   });
   const projects = await payload.find({
     collection: "Project",
-    sort: "createdAt",
+    sort: "sortOrder",
   });
   const skills: ISkill = await payload.findGlobal({
     slug: "skills",
