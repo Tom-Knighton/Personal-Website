@@ -1,7 +1,15 @@
+import { revalidateTag } from "next/cache";
 import { GlobalConfig } from "payload";
 
 export const Experience: GlobalConfig = {
   slug: "experience",
+  hooks: {
+    afterChange: [
+      () => {
+        revalidateTag('payload');
+      }
+    ]
+  },
   fields: [
     {
       name: "experience",

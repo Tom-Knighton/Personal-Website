@@ -1,7 +1,15 @@
+import { revalidateTag } from "next/cache";
 import { CollectionConfig } from "payload";
 
 export const Project: CollectionConfig = {
   slug: "Project",
+  hooks: {
+    afterChange: [
+      () => {
+        revalidateTag('payload');
+      }
+    ]
+  },
   fields: [
     {
       name: "name",

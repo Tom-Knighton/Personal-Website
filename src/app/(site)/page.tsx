@@ -13,25 +13,43 @@ import ExperienceTimeline from "@/components/Experience/ExperienceTimeline";
 import EducationTimeline from "@/components/Education/EducationTimeline";
 import ContactMe from "@/components/Contact/ContactMe";
 import { ToastContainer } from "react-toastify";
+import { unstable_cache } from "next/cache";
 
 export const dynamic = 'force-static'
 
 const payload = await getPayload({ config });
 
+const getBio = unstable_cache(
+  async (): Promise<Bio> => payload.findGlobal({ slug: "bio" }),
+  ["bio-global"],
+  { tags: ["payload", "bio"] },
+);
+
+const getSkills = unstable_cache(
+  async (): Promise<ISkill> => payload.findGlobal({ slug: "skills" }),
+  ["skills-global"],
+  { tags: ["payload", "skills"] },
+);
+
+const getBioLinks = unstable_cache(
+  async () => payload.find({ collection: "BioLink" }),
+  ["bio-links"],
+  { tags: ["payload", "bio-links"] },
+);
+
+const getProjects = unstable_cache(
+  async () => payload.find({ collection: "Project", sort: "sortOrder" }),
+  ["projects"],
+  { tags: ["payload", "projects"] },
+);
+
 export default async function Home() {
-  const details: Bio = await payload.findGlobal({
-    slug: "bio",
-  });
-  const bioLinks = await payload.find({
-    collection: "BioLink",
-  });
-  const projects = await payload.find({
-    collection: "Project",
-    sort: "sortOrder",
-  });
-  const skills: ISkill = await payload.findGlobal({
-    slug: "skills",
-  });
+  const [details, skills, bioLinks, projects] = await Promise.all([
+    getBio(),
+    getSkills(),
+    getBioLinks(),
+    getProjects(),
+  ]);
 
   return (
     <div className={styles.body}>

@@ -1,7 +1,15 @@
+import { revalidateTag } from "next/cache";
 import { CollectionConfig } from "payload";
 
 export const Education: CollectionConfig = {
   slug: "Education",
+  hooks: {
+    afterChange: [
+      () => {
+        revalidateTag('payload');
+      }
+    ]
+  },
   fields: [
     {
       name: "DegreeTitle",
@@ -28,8 +36,8 @@ export const Education: CollectionConfig = {
       type: "array",
       fields: [
         {
-            name: "Text",
-            type: "text"
+          name: "Text",
+          type: "text"
         }
       ]
     },

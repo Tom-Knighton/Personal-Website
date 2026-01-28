@@ -1,7 +1,15 @@
+import { revalidateTag } from "next/cache";
 import { GlobalConfig } from "payload";
 
 export const Skills: GlobalConfig = {
   slug: "skills",
+  hooks: {
+    afterChange: [
+      () => {
+        revalidateTag('payload');
+      }
+    ]
+  },
   fields: [
     {
       name: "professional",

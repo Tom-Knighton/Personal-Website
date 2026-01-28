@@ -1,7 +1,15 @@
+import { revalidateTag } from "next/cache";
 import { GlobalConfig } from "payload";
 
 export const MyBio: GlobalConfig = {
     slug: 'bio',
+    hooks: {
+        afterChange: [
+            () => {
+                revalidateTag('payload');
+            }
+        ]
+    },
     fields: [
         {
             name: 'shortBioText',

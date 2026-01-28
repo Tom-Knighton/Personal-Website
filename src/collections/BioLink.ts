@@ -1,7 +1,15 @@
+import { revalidateTag } from "next/cache";
 import { CollectionConfig } from "payload";
 
 export const BioLink: CollectionConfig = {
   slug: "BioLink",
+  hooks: {
+    afterChange: [
+      () => {
+        revalidateTag('payload');
+      }
+    ]
+  },
   fields: [
     {
       name: "Link Url",
